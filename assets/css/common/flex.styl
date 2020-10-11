@@ -1,0 +1,60 @@
+// flex 布局
+.flex
+  display: flex
+.wrap
+  flex-wrap wrap
+.flex-wrap
+  @extend .flex
+  @extend .wrap
+.justify-center
+  justify-content center
+.justify-end
+  justify-content flex-end
+.between
+  justify-content space-between
+.around
+  justify-content space-around
+.align-center
+  align-items: center
+.align-end
+  align-items: flex-end
+.direction-column
+  flex-direction column
+.flex-align-center // 水平 居中
+  @extend .flex
+  @extend .align-center
+.flex-align-end // 水平 居中
+  @extend .flex
+  @extend .align-end
+.flex-justify-center // 垂直 居中
+  @extend .flex
+  @extend .justify-center
+.flex-justify-end // 垂直 居中
+  @extend .flex
+  @extend .justify-end
+.flex-center // 垂直水平 居中
+  @extend .flex
+  @extend .flex-align-center
+  @extend .justify-center
+.flex-column // 垂直
+  @extend .flex
+  @extend .direction-column
+.flex-column-between // 垂直 两端对齐
+  @extend .flex-column
+  @extend .between
+.flex-column-center // 垂直 居中
+  @extend .flex
+  @extend .flex-column
+  @extend .align-center
+.flex-between // 水平 两端对齐
+  @extend .flex
+  @extend .between
+.flex-between-center // 水平 两端对齐, 垂直居中
+  @extend .flex-between
+  @extend .align-center
+.flex-around // 水平 平均对齐
+  @extend .flex
+  @extend .around
+.flex-around-center // 水平 平均对齐， 垂直居中
+  @extend .flex-around
+  @extend .align-center

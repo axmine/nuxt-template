@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
+    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
+  },
+  "dependencies": {
+    "@axmine/helper": "^1.0.9",
+    "ant-design-vue": "^1.6.5",
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "express-useragent": "^1.0.15",
+    "nuxt": "^2.14.5",
+    "qrcode": "^1.4.4"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/proxy": "^2.0.1",
+    "@vue/test-utils": "^1.1.0",
+    "ava": "^3.12.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.8.1",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^3.0.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "svg-sprite-loader": "^5.0.0",
+    "svgo": "^1.3.2"
+  }
+}
