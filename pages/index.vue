@@ -2,9 +2,7 @@
   <div class="home-index">
     <com-banner />
     <div class="container">
-      <p @click="handleClick">
-        Hello haha
-      </p>
+      Home
     </div>
   </div>
 </template>
@@ -29,18 +27,19 @@ export default {
       data: {}
     }
   },
-  // mounted () {
-  //   this.handleClick()
-  // },
   methods: {
     async handleClick () {
-      // this.$store.dispatch('SetToken', 'hahahahahahahahah')
       const query = {
         pageNum: 1,
         pageSize: 10
       }
       const data = await this.$http.post('/article/lists', query)
       console.log(data)
+    }
+  },
+  head () {
+    return {
+      title: 'Home'
     }
   }
 }
