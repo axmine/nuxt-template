@@ -1,15 +1,24 @@
-import { axios } from './config/index.js'
+import { axios, site } from './config/index.js'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'nuxt-template',
+    title: site.title || 'nuxt-template',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'keywords', name: 'keywords', content: site.keywords || '' },
+      { hid: 'description', name: 'description', content: site.description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: site.favicon || '/favicon.ico' },
+      ...site.globalCSS.reduce((aCss = [], href) => {
+        return aCss.concat({ rel: 'stylesheet', href })
+      }, [])
+    ],
+    script: [
+      ...site.globalJS.reduce((aJs = [], src) => {
+        return aJs.concat({ src })
+      }, [])
     ]
   },
 
