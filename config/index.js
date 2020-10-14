@@ -1,6 +1,6 @@
 module.exports = {
   axios: {
-    api: 'http://www.api.com', // 接口地址
+    api: 'https://www.fastmock.site/mock/f3323c56a356fd7db4e2715f7b415ce7/nuxt/', // 接口地址
     baseURL: '/api', // 前缀，自定义，只要不跟路由冲突即可
     times: 1, // 失败时重复请求的次数
     updateToken: [4002, 4020], // 更新token
