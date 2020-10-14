@@ -1,5 +1,9 @@
 import { axios, site } from './config/index.js'
 export default {
+  globalName: 'root',
+  globals: {
+    id: globalName => globalName
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: site.title || 'nuxt-template',
