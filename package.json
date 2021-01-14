@@ -16,7 +16,7 @@
   "dependencies": {
     "@axmine/helper": "^1.0.9",
     "ant-design-vue": "^1.7.2",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "express-useragent": "^1.0.15",
     "nuxt": "^2.14.5",
